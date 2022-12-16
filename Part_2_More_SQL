@@ -1,0 +1,17 @@
+CODEWARS
+SELECT * FROM people WHERE age > 50 ORDER BY age DESC;
+SELECT SUM(age) AS age_sum FROM people;
+SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people;
+SELECT * FROM students WHERE IsActive = 1;
+SELECT age, COUNT(*) AS people_count FROM people GROUP BY age;
+SELECT age, COUNT(id) AS total_people FROM people GROUP BY age HAVING COUNT(id) > 9;
+
+TUTORIAL 5 - SUM & COUNT
+SELECT SUM(population) FROM world;
+SELECT continent FROM world GROUP BY continent;
+SELECT SUM(GDP) FROM world WHERE continent = 'Africa';
+SELECT COUNT(name) FROM world WHERE area > 999999;
+SELECT SUM(population) FROM world WHERE name IN ('Estonia', 'Latvia', 'Lithuania');
+SELECT continent, COUNT(name) FROM world GROUP BY continent;
+SELECT continent, COUNT(name) FROM world WHERE population >= 10000000 GROUP BY continent;
+SELECT continent FROM world GROUP BY continent HAVING SUM(population) >= 100000000;
